@@ -1,11 +1,11 @@
 // Filename: formurlencoded.js
 // Timestamp: 2016.03.07-12:29:28 (last modified)
-// Author(s): Bumblehead (www.bumblehead.com), JBlashill (james@blashill.com)
+// Author(s): Bumblehead (www.bumblehead.com), JBlashill (james@blashill.com), Karri Rasinmäki
 //
 // http://www.w3.org/TR/html5/forms.html#url-encoded-form-data
 // input: {one:1,two:2} return: '[one]=1&[two]=2'
 
-var formurlencoded = module.exports = function (data, opts) {
+export default function formurlencoded(data, opts) {
   // ES5 compatible version of `/[^ !'()~\*]/gu`, https://mothereff.in/regexpu
   var encodechar = new RegExp([
     '(?:[\0-\x1F"-&\+-\}\x7F-\uD7FF\uE000-\uFFFF]|',
